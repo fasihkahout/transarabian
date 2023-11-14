@@ -1,0 +1,8 @@
+[04-Oct-2023 10:53:37 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/funtxjyc/transweb.funtashtechnologies.com/app/Models/Candidate.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/funtxjyc/transweb.funtashtechnologies.com/app/Models/Candidate.php on line 10
+[04-Oct-2023 10:53:39 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/funtxjyc/transweb.funtashtechnologies.com/app/Models/Candidate.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/funtxjyc/transweb.funtashtechnologies.com/app/Models/Candidate.php on line 10

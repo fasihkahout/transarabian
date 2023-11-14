@@ -1,0 +1,120 @@
+
+    .section2_looking_job{
+    
+        margin: 5vh;
+        border-radius: 5px;
+        
+    
+    }
+    
+@media (min-width: 300px) and (max-width: 700px)
+{
+    
+.section2_looking_job1
+    {
+        margin-bottom: 80vh;
+    }
+}
+   
+@media (min-width: 700px) and (max-width: 1024px)
+{
+    
+.section2_looking_job1
+    {
+        margin-bottom: 60vh;
+    }
+}
+   
+@media (min-width: 1024px) and (max-width: 1300px)
+{
+    
+.section2_looking_job1
+    {
+        margin-bottom: 20vh;
+    }
+}
+   
+@media (min-width: 1300px) and (max-width: 1800px)
+{
+    
+.section2_looking_job1
+    {
+        margin-bottom: 0vh;
+    }
+}
+
+    
+    /* card start  */
+    .card-client {
+  background:#173152;
+  width:100%;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  border: 4px ;
+  box-shadow: 0 6px 10px rgba(207, 212, 222, 1);
+  border-radius: 10px;
+  text-align: center;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease;
+}
+
+.card-client:hover {
+  transform: translateY(-20px);
+}
+
+.user-picture {
+  overflow: hidden;
+  object-fit: cover;
+  width: 15rem;
+  height: 15rem;
+  background: white;
+  border: 4px solid #7cdacc;
+  border-radius: 999px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: 10px;
+}
+
+.user-picture img {
+  padding: 20px;
+
+  
+}
+
+.name-client {
+  margin: 0;
+  margin-top: 20px;
+  font-weight: 600;
+  font-size: 18px;
+  color: white;
+}
+
+.name-client span {
+  display: block;
+  font-weight: 200;
+  font-size: 16px;
+}
+
+.social-media:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin: 20px 0;
+  background: #7cdacc;
+}
+.social-media .btn_apply_now
+{
+  padding: 20px;
+border-radius: 5px;
+  background:#4371af;
+}
+.social-media .btn_apply_now:hover
+{
+
+  background:black;
+  color: white;
+}

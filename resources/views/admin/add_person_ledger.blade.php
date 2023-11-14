@@ -38,7 +38,7 @@
       <input type="date"  name="date" class="form-control" id="date" >
     </div>
 
-    <div class="col-sm-5 mx-6 form-group">
+    <!-- <div class="col-sm-5 mx-6 form-group">
     <label for="name">Bank :</label>
     <select class="form-control" name="accounts_id" value="{{ old('accounts_id') }}">
        
@@ -46,7 +46,7 @@
             <option value="{{$account->id}}">{{$account->name}}</option>
         @endforeach
     </select>
-</div>
+</div> -->
 <div class="col-sm-5 mx-6 form-group">
       <label for="fee">Credit Amount :</label>
       <input type="text"  name="credit_amount" class="form-control" id="credit_amount" >

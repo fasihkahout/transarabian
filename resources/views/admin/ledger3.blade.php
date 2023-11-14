@@ -19,7 +19,7 @@
               <th>Title</th>
               <th>Reference ID</th>
               <th>Description</th>
-              <th>Bank</th>
+             
               <th>Credit Amount</th>
               <th>Debit Amount</th>
               <th>Balance</th>
@@ -32,7 +32,7 @@
               <td>{{ $entry->title }}</td>
               <td>{{ $entry->ref_id }}</td>
               <td>{{ $entry->description }}</td>
-              <td>{{ isset($entry->accounts->name) ? $entry->accounts->name : 'N/A' }}</td>
+              
               <td>{{ $entry->credit_amount ? '+' . $entry->credit_amount : 0 }}</td>
               <td>{{ $entry->debit_amount ? '-' . $entry->debit_amount : 0 }}</td>
               <td>{{ $entry->balance }}</td>

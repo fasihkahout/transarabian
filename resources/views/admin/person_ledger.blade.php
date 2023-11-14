@@ -20,7 +20,6 @@
               <th>Date</th>
               <th>Title</th>
               <th>Reference ID</th>
-              <th>Bank</th>
               <th>Credit Amount</th>
               <th>Debit Amount</th>
               <th>Description</th>
@@ -33,7 +32,6 @@
                 <td>{{$personLedger->date}}</td>
                 <td>{{$personLedger->title}}</td>
                 <td>{{$personLedger->ref_id}}</td>
-                <td>{{isset($personLedger->accounts->name)?$personLedger->accounts->name:'N/A'}}</td>
                <td>{{$personLedger->credit_amount ?? 0}}</td>
 <td>{{$personLedger->debit_amount ?? 0}}</td>
 

@@ -38,7 +38,7 @@
                   <input type="date"  name="date" class="form-control" value="{{ $personLedger->date }}" id="date" placeholder="...">
             </div>
 
-    <div class="col-sm-5 mx-6 form-group">
+   <!--  <div class="col-sm-5 mx-6 form-group">
     <label for="name">Expense From:</label>
     <select class="form-control" name="accounts_id" value="{{ old('accounts_id') }}">
        
@@ -47,7 +47,7 @@
                                     selected @endif>{{$account->name}}</option>
         @endforeach
     </select>
-</div>
+</div> -->
          <div class="col-sm-5 mx-6 form-group">
     <label for="fee">Credit Amount:</label>
     <input type="text" name="credit_amount" class="form-control" value="{{ $personLedger->credit_amount ?? 0 }}" id="credit_amount" placeholder="...">

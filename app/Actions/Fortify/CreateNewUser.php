@@ -26,7 +26,7 @@ class CreateNewUser implements CreatesNewUsers
 
     // Check if email is present before adding validation rule
     if (isset($input['email'])) {
-        $validationRules['email'] = ['string', 'email', 'max:255', 'unique:users'];
+        $validationRules['email'] = ['string', 'email', 'max:255'];
     }
 
     Validator::make($input, $validationRules)->validate();

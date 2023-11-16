@@ -16,7 +16,7 @@ class CreateNewUser implements CreatesNewUsers
      *
      * @param  array<string, string>  $input
      */
-   public function create(array $input): User
+ public function create(array $input): User
 {
     $validationRules = [
         'name' => ['required', 'string', 'max:255'],
@@ -25,24 +25,50 @@ class CreateNewUser implements CreatesNewUsers
     ];
 
     // Check if email is present before adding validation rule
-    if (isset($input['email'])) {
+    if (empty($input['email'])) {
+        // Generate a random email if it's empty
+        $input['email'] = $this->generateRandomEmail();
+    } else {
         $validationRules['email'] = ['string', 'email', 'max:255'];
     }
 
-    Validator::make($input, $validationRules)->validate();
+    // Add unique rule for phone_number
+    $validationRules['phone_number'] = ['nullable', 'string', 'unique:users'];
+
+    // Validate the input
+    $validator = Validator::make($input, $validationRules);
+
+    if ($validator->fails()) {
+        // If validation fails, set an error flash message
+        session()->flash('error', 'User registration failed. Please check the form.');
+
+        // Redirect back with input and validation errors
+        return redirect()->back()->withErrors($validator)->withInput();
+    }
 
     // Create the user
     $user = User::create([
         'name' => $input['name'],
-        'email' => $input['email'] ?? null, // Use null if email is not present
+        'email' => $input['email'],
         'phone_number' => $input['phone_number'] ?? null,
         'password' => Hash::make($input['password']),
     ]);
 
+    // Set a success flash message
+    session()->flash('success', 'Your Random email is generated .. You can use this email to login in future!');
+
     // Store the intended URL in the session
     session(['url.intended' => '/profile']);
 
+    // Redirect to a success page or wherever you want
     return $user;
 }
+
+private function generateRandomEmail(): string
+{
+    // Generate a random email using a unique identifier or any logic you prefer
+    return 'random_' . uniqid() . '@example.com';
+}
+
 
 }

